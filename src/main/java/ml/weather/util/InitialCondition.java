@@ -86,7 +86,7 @@ public enum InitialCondition {
     }
 
     public String toString() {
-	StringBuffer toString = new StringBuffer();
+	StringBuilder toString = new StringBuilder();
 
 	toString.append("<b>").append(name()).append(" condiciones iniciales:</b><br>");
 	toString.append("- Angulo inicial: ").append(this.geInitialAngle());

@@ -43,11 +43,11 @@ public class WeatherForecaster {
 	LOGGER.debug("Ferengi {}", ferengi);
 	LOGGER.debug("Betasoid {}", betasoid);
 
-	int orientation = triangleArea();
+	int area = triangleArea();
 
-	LOGGER.debug("Orientation {}", orientation);
+	LOGGER.debug("Area {}", area);
 	// Evaluate if it's a triangle or a straight line
-	if (Math.abs(orientation) < ERROR_THRESHOLD) {
+	if (area < ERROR_THRESHOLD) {
 	    // Straight line
 	    int sunOrientation = triangleArea(vulcan, ferengi, sun);
 
@@ -68,7 +68,7 @@ public class WeatherForecaster {
     }
 
     public int triangleArea() {
-	return triangleArea(vulcan, ferengi, betasoid);
+	return Math.abs(triangleArea(vulcan, ferengi, betasoid));
     }
 
     private int triangleArea(Planet a, Planet b, Planet c) {

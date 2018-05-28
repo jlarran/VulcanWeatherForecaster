@@ -47,7 +47,7 @@ public abstract class Planet {
 
     @Override
     public String toString() {
-	StringBuffer toString = new StringBuffer("{ angle: ");
+	StringBuilder toString = new StringBuilder("{ angle: ");
 	toString.append(angle);
 	toString.append(", x: ").append(x);
 	toString.append(", y: ").append(y);
